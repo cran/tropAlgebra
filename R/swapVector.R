@@ -1,32 +1,20 @@
 #'
 #'
 #'  Swap  Vectors
-#'   This function swaps the values of both vectors, Both Vectors must have equal length.
+#'   This function swaps the values of both vectors. This function works only if both vectors have equal length.
+#'  If the length of source and target vectors are not same it returns 'NULL'. This function swaps the vectors in memory(like pass by reference), it does not return the vectors.
 #'  @param X a Vector.
 #'  @param Y a Vector.
 #'
 #'
-#'  @return  Exchaged Valued vectors.
+#'  @return  Returns the swapped vectors \code{x} and \code{y}
 #'
 #'
 #'  @examples
-#'  swapVector((c(6,7,8),(c(3,2,1))
-#'e.g.
-#'  [1]  [2]  [3]
-#'  6    7    8     vector X
-#'  ...................
-#'  [1]  [2]  [3]
-#'   3    2    1     vector Y
-#'  ...................
-#'  Now function call:
+#'  x<-c(6,7,8)
+#'  y<-c(3,2,1)
 #'  swapVector(x,y)
-#'  Then swapped vectors are :
-#'  [1]  [2]  [3]
-#'  6    7    8     vector Y
-#'  ...................
-#'  [1]  [2]  [3]
-#'   3    2    1     vector X
-#'  ...................
+#'
 #'
 #'@export
 swapVector<-function(x,y){
@@ -52,5 +40,5 @@ swapVector<-function(x,y){
     eval.parent(substitute(x<-xx))
     eval.parent(substitute(y<-yy))
   }else
-    return(print("Vectors  must be equal in length.\n"))
+    return(stop("vectors' length must be equal"))
 }

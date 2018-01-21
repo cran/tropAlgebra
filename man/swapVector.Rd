@@ -5,7 +5,7 @@
  Swap  Vectors
  }
 \description{
- This function swaps the values of both vectors, Both Vectors must have equal length.
+ This function swaps the values of both vectors. This function works only if both vectors have equal length.
  }
 \usage{
 swapVector(x,y)
@@ -13,34 +13,20 @@ swapVector(x,y)
 
 \arguments{
   \item{x}{
- A vector
+ A vector.
 }
 \item{y}{
- A vector
+ A vector.
 }
 }
 \details{
-e.g.
-  [1]  [2]  [3]
-  6    7    8     vector X
-  ...................
-  [1]  [2]  [3]
-   3    2    1     vector Y
-  ...................
-  Now function call:
-  swapVector(x,y)
-  Then swapped vectors are :
-  [1]  [2]  [3]
-  6    7    8     vector Y
-  ...................
-  [1]  [2]  [3]
-   3    2    1     vector X
+If the lengths of both vectors are not same, it generates an error. This function swaps the vectors in memory(like pass by reference), it does not return the vectors, but interchanges their values.
 }
 \value{
-Returns the swapped vectors \code{x} and \code{y}
+Swapped vectors \code{x} and \code{y}.
 }
 \examples{
 x<-c(6,7,8)
 y<-c(3,2,1)
-    swapVector(x,y)
+swapVector(x,y)
 }

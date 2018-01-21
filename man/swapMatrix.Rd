@@ -5,48 +5,28 @@
   Swap Matrices
   }
 \description{
-This function inchange the values of both matrices Both Matrix must have equal number of rows and columns.
+This function interchanges the values of both matrices.This function works only if both matrices are of same size.
 }
 \usage{
-swapMatrix(x,y)
+swapMatrix(X,Y)
 }
 \arguments{
-  \item{x}{
- A matrix
+  \item{X}{
+ A matrix.
 }
-\item{y}{
- A matrix
+\item{Y}{
+ A matrix.
 }
 }
 \details{
-e.g.
-
-    [1]  [2]
-  [1]  2    3     1st matrix that is X
-  [2]  5    7
-      [1]  [2]
-  [1]  6    3     2nd matrix that is Y
-  [2]  1    9
-  Now, calling function...
-  swapMatrix(X,Y)
-  Then the swapped  Matrices will be...
-      [1]  [2]
-  [1]  6    3     1st matrix that is X
-  [2]  1    9
-
-  and
-
-      [1]  [2]
-  [1]  2    3     2nd matrix that is Y
-  [2]  5    7
-
+If the size of both matrices are not same, it generates an error. This function swaps the matrices in memory(like pass by reference), it does not return the matrices, but interchanges their values.
 }
 \value{
-Returns the swapped Matrix \code{x} and \code{y}
+Swapped Matrix \code{X} and \code{Y}.
 }
 \examples{
 x<-matrix(c(2,3,5,7),ncol=2,nrow=2)
 y<-matrix(c(6,3,1,9),ncol=2, nrow=2)
-   swapMatrix(x,y)
+swapMatrix(x,y)
 
 }

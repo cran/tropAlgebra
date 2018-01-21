@@ -2,38 +2,31 @@
 \alias{copyVector}
 
 \title{
-Copy Vector
+Copy Vectors
 }
 \description{
-This function copies the 1st vector's values in the 2nd vector, Vectors must have equal length..}
+This function copies the first vector in second one. This fucntion will work only if both vectors are of same length.
+}
 \usage{
 copyVector(x,y)
 }
 
 \arguments{
   \item{x}{
-  A vector to be copy
+  Vector to be copied.
 }
 \item{y}{
-  A vector in which vector  is to be copy.
+  Target vector.
 }
 }
 \details{
-e.g.
-  x is a vector
-  x<-c(1,2,3,4)
-  and y is an empty vector
-  y<-c(NA,NA,NA,NA)
-  we want copy vector 'x' into 'y'. This fuction do this
-  copyVector(x,y)
-  now values of 'y' vector will be same as of 'x' vector
-
+If the length of source and target vectors are not same it generates an error.
 }
 \value{
-returns \code{y} copied from \code{x}
+Returns \code{y}.
 }
 \examples{
   x<-c(1,2,3,4)
   y<-c(NA,NA,NA,NA)
-   copyVector(x,y)
+  copyVector(x,y)
 }
